@@ -11,3 +11,14 @@ public class q1 {
 
     }
 }
+
+/**
+
+1) O que acontece quando é usado um número com mais de cinco dígitos?
+    O código roda perfeitamente, pois funciona lendo as 5 primeiras posições informadas de um texto.
+
+2) E com menos de cinco dígitos?
+    O código não funciona, pois tenta acessar uma posição fora dos limites do texto.
+
+
+**/
