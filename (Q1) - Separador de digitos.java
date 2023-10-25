@@ -20,5 +20,4 @@ public class q1 {
 2) E com menos de cinco dígitos?
     O código não funciona, pois tenta acessar uma posição fora dos limites do texto.
 
-
 **/
