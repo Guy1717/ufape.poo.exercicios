@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+        //Q1
+        Elevador elevador = new Elevador(7, 17);
+        elevador.entradaPessoa(6);
+        elevador.saidaPessoa(3);
+        elevador.subir(7);
+        elevador.descer(1);
+        elevador.imprimir();
+
+        //Q2
+        System.out.println("Informe 4 coordenadas para compor dois pontos: (x,y) (x,y)\n");
+        Ponto2D ponto1 = new Ponto2D(input.nextInt(),input.nextInt());
+        Ponto2D ponto2 = new Ponto2D(input.nextInt(),input.nextInt());
+        ponto1.imprimir();
+        ponto2.imprimir();
+
+        //Q3
+        Retangulo retangulo1 = new Retangulo(ponto1, ponto2);
+        Retangulo retangulo2 = new Retangulo(1,7,6,3);
+        retangulo1.imprimir();
+        retangulo2.imprimir();
+
+        System.out.printf("# Ponto contido em retangulo1:\n %b\n", retangulo1.pontoContido(ponto1));
+        System.out.printf("# Ponto contido em retangulo2:\n %b\n", retangulo2.pontoContido(new Ponto2D(1,8)));
+
+        /*
+            Q4
+                Agregação entre retângulo e Ponto2D. Não se encaixa como composição pois um determinado ponto não depende dum retângulo para existir.
+         */
+
+        //Q5
+        System.out.println("# Interseção:");
+        retangulo1.calculaIntersecao(retangulo2).imprimir();
+
+
+    }
+
+}
+
